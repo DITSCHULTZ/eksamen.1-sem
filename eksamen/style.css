@@ -1,0 +1,177 @@
+/** Eksamensprojektet 1. Semester - Amo Hvedemel **/
+
+
+/*Google fonts som noget af det første*/
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+/*
+
+/* Variabler*/
+:root {
+  /* farver */
+--offwhite: #f7f7ea;
+--red: #bb615c;
+--beige: #dcba83;
+--grey: #d2d0cc;
+
+/* fonte */
+--overskrift1: 'Abril Fatface', cursive;
+--tekst: "Avenir Next", sans-serif !important;
+
+/* teksturer ("Kornbaggrund") */
+--korn: url('billeder/korn.png');
+
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--offwhite);
+}
+
+/* Wrap */
+#wrap {
+  min-height: 100vh;
+  margin: auto;
+}
+
+/* MENUBAR */
+#navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80px;
+    width: 100%;
+    color: black;
+}
+
+/* Dropdown Button - https://www.w3schools.com/howto/howto_css_dropdown.asp */
+.dropbtn {
+  color: black;
+  padding-bottom: 16px;
+  font-family: monospace;
+  font-size: 220%;
+  text-decoration: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--offwhite);
+  min-width: 160px;
+  z-index: 1;
+  margin-top: 16px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: var(--tekst);
+  font-size: 130%;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: var(--beige);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: var(--offwhite)
+}
+
+.dropbtn:hover {
+  color: var(--beige);
+  cursor: pointer;
+}
+
+/* BURGERMENU */
+ nav a {
+  color: black;
+  text-decoration: none;
+}
+/* MENUBAR */
+#navigationburger {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+    color: black;
+}
+
+/* Menupunkter*/
+.menupunkt {
+  font-family: monospace;
+  font-size: 3em;
+  line-height: 2;
+}
+
+.menu-content {
+  text-align: center;
+  font-family: var(--tekst);
+}
+
+/*Baggrundsdesign*/
+#bodymenu {
+  background-image: var(--korn);
+
+}
+
+
+/* Extra small devices (phones, 768px and down) */
+@media only screen and (max-width: 768px) {
+  /* navbar burgermenu ved lille skærm */
+    .burgermenu{
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .burgermenu .bar{
+      height: 3px;
+      width: 100%;
+      background-color: var(--black);
+      border-radius: 10px;
+    }
+    .dropdown{
+      display: none;
+    }
+  }
+
+  /* Small devices (portrait tablets and large phones, 769px and up) */
+@media only screen and (min-width: 769px) {
+  /* navbar burgermenu */
+    .burgermenu{
+      display:none;
+    }
+
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  /* navbar burgermenu */
+    .burgermenu{
+      display:none;
+    }
+  }
