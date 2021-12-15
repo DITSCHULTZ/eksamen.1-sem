@@ -92,7 +92,7 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: var(--offwhite);
+  background-color: var(--beige);
   min-width: 160px;
   z-index: 1;
   margin-top: 16px;
@@ -120,11 +120,11 @@ body {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-  background-color: var(--offwhite)
+  background-color: transparent;
 }
 
 .dropbtn:hover {
-  color: var(--beige);
+  color: black;
   cursor: pointer;
 }
 
@@ -191,12 +191,13 @@ body {
   font-family: var(--tekst);
 }
 /*landingpage footer*/
-.footimg {
-  width:100%;
-  margin-top: -35%;
-}
+
 .footfoto{
   background-image: url(../billeder/footer.png);
+  height: 150vh;
+  margin-top: -35%;
+  background-repeat: no-repeat;
+  width:100%;
 }
 
 /*Footerflex*/
@@ -208,6 +209,7 @@ body {
 #footerinfo h2{
   font-family: var(--tekst);
   font-weight: 400;
+  margin-top: 145%;
 }
 
 .kontakt {
@@ -221,6 +223,45 @@ body {
 .nyhedsbrev {
   flex:33%
 }
+
+/*Nyhedsbrev - https://www.w3schools.com/howto/howto_css_newsletter.asp*/
+
+/* Add some padding and a grey background color to containers */
+.container {
+  padding: 10px;
+  background-color: transparent;
+  color: black;
+}
+
+/* Style the input elements and the submit button */
+input[type=text], input[type=submit] {
+  width: 94%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+/* Add margins to the checkbox */
+input[type=checkbox] {
+  margin-top: 16px;
+  margin-left: 10%;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: var(--beige);
+  color: var(--offwhite);
+  font-size: 1.2em;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
 /*Underside - bananbrød*/
 
 /*Baggrundstekstur*/
@@ -304,6 +345,75 @@ text-align: center;
   flex:80%;
 }
 
+/*Underside - Om os*/
+
+#om_os {
+  background-image: var(--korn);
+}
+
+#om_os h1, #bbb h1 {
+  color: black;
+  font-size: 3em;
+  position: relative;
+  z-index: 100;
+  text-align: center;
+  font-family: monospace;
+  font-weight: 500;
+  padding-bottom: 10%;
+}
+
+/* Om Amo flexbox */
+.om_amo{
+  display: inline-flex;
+  width:100%;
+}
+
+.omtekst {
+  flex:50%;
+  margin: 10px;
+}
+.omtekst p {
+  font-size: 1.2em;
+text-align: center;
+}
+
+.omtekst2 p {
+  text-align: center;
+}
+
+.omfoto {
+  flex:50%;
+  margin: 10px;
+}
+.omfoto img {
+  width: 70%;
+  padding-left: 15%;
+  opacity: 100%;
+}
+/*Tekst om emballagen*/
+#bbb h1 {
+  padding: 5% 10% 0 10%;
+}
+
+#bbb p {
+  padding: 5% 15% 10% 25%;
+}
+/*Infographic tilrettes*/
+#infographic h2{
+  text-align: center;
+  padding-top: 10%;
+  font-family: var(--tekst);
+  font-weight: 400;
+}
+
+#infographic img {
+  width:70%;
+  padding: 5% 10% 0 10%;
+}
+
+
+
+
 /* Extra small devices (phones, 768px and down) */
 @media only screen and (max-width: 768px) {
   #navigation {
@@ -347,14 +457,14 @@ text-align: center;
 /*Emballagetekst*/
 #emballage {
   height: 80vh;
-padding-bottom: 45%;
+padding-bottom: 30%;
 }
 
 #emballage h1 {
   font-size: 2em;
 }
   #emballage p {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin: 5% 10% 0 10%;
   }
 #emballage .mereinfo {
@@ -362,16 +472,50 @@ padding-bottom: 45%;
 }
 
 /*landingpage footer*/
-.footimg {
-  margin-top: -45%;
-  height: 40vh;
+.footfoto {
+  margin-top: -145%;
+  height: 120vh;
 }
 #footerinfo h2{
   font-size: 1.2em;
+  margin-top: 370%;
 }
 #footerinfo p{
   font-size: 0.8em;
 }
+
+/*Nyhedsbrev - https://www.w3schools.com/howto/howto_css_newsletter.asp*/
+
+/* Add some padding and a grey background color to containers */
+.container {
+  padding: 10px;
+  background-color: transparent;
+  color: black;
+}
+
+/* Style the input elements and the submit button */
+input[type=text], input[type=submit] {
+  width: 94%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+/* Add margins to the checkbox */
+input[type=checkbox] {
+  margin-top: 16px;
+  margin-left: 10%;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  font-size: 0.8em;
+}
+
+
     /*Bananbrød media rules*/
 
 
@@ -397,9 +541,31 @@ padding-bottom: 45%;
     .ingrediensenhed {
       flex:75%;
     }
+
+  /*Om os media rules*/
+
+#om_os {
+  margin-top: -120%;
+}
+  /*Flexwrap til intro*/
+  .om_amo {
+    flex-wrap: wrap;
   }
+.omtekst p, .omtekst2 p {
+  font-size: 1em;
+  padding: 0 5% 0 5%;
+}
 
+  .omfoto img{
+    width:40%;
+    margin-left: 15%;
+  }
+/*Infographic no show*/
+#infographic {
+  display:none;
+}
 
+}
 
   /* Small devices (portrait tablets and large phones, 769px and up) */
 @media only screen and (min-width: 769px) {
@@ -420,6 +586,7 @@ padding-bottom: 45%;
       display:block;
       margin-top: 65%;
       width: 100%;
+      height: 120vh;
     }
     /*Kampagnefoto*/
 .kampagne {
@@ -437,7 +604,7 @@ padding-bottom: 45%;
   /*Emballagetekst*/
   #emballage {
     height: 80vh;
-  padding-bottom: 25%;
+  padding-bottom: 45%;
   }
 
   #emballage h1 {
@@ -452,15 +619,19 @@ padding-bottom: 45%;
   }
 
   /*Landingpage footer*/
+  .footfoto {
+    margin-top: -55%;
+  }
+
   #footerinfo {
-    margin-top: -200px;
     padding:20px;
   }
   #footerinfo h2{
-    font-size: 2em;
+    font-size: 1.6em;
+    margin-top: 160%;
   }
   #footerinfo p{
-    font-size: 1.5em;
+    font-size: 1.1em;
   }
   /*Underside - bananbrød*/
 
@@ -491,6 +662,29 @@ padding-bottom: 45%;
     line-height: 2.5;
     padding: 5% 20% 5% 20%;
   }
+
+  /*Underside Om amo*/
+
+  /*Underside om Amo*/
+  #om_os {
+    margin-top: -40%;
+  }
+  /*Flexbox*/
+    .om_amo {
+      flex-wrap: nowrap;
+    }
+  /*Tekst tilpasses*/
+
+    .omtekst {
+      flex:70%;
+      margin: 20px;
+      padding-left: 10%;
+      font-size: 0.9em;
+    }
+    .omtekst2 p {
+      font-size: 1.1em;
+      padding: 0 15% 0 15%;
+    }
   }
 
   /* Large devices (laptops/desktops, 992px and up) */
@@ -513,12 +707,12 @@ padding-bottom: 45%;
 
     .kampagne_web {
       display:block;
-      margin-top: 8%;
+      margin-top: 10%;
     }
 
     /*Emballagetekst*/
 #emballage {
-padding-bottom: 15%;
+padding-bottom: 35%;
 }
 
     #emballage h1 {
@@ -531,14 +725,21 @@ padding-bottom: 15%;
     #emballage .mereinfo {
       font-size: 1.5em;
     }
-
+    /*Landingpage footer*/
+    .footfoto {
+    margin-top: -35%;
+    }
+    #footerinfo {
+      padding:20px;
+    }
+    #footerinfo h2{
+      font-size: 2em;
+      margin-top: 100%;
+    }
+    #footerinfo p{
+      font-size: 1.5em;
+    }
 /*Underside bananbrød*/
-
-/*Introtekst flexbox*/
-  .bananintro {
-    flex-wrap: nowrap;
-    margin: 5%;
-  }
 
 /*Baggrundstekstur udvides*/
 .baggrundbanan img {
@@ -564,21 +765,63 @@ padding-bottom: 15%;
 
 /* introflexbox */
 .bananintro{
-  width:80%;
+  width:90%;
+  flex-wrap: nowrap;
+  margin: 5%;
 }
 
 .introtekst {
-  flex:30%;
+  flex:40%;
   margin: 20px;
-  padding-left: 10%;
+  padding-left: 5%;
   font-size: 1.5em;
 }
 
 .introfoto {
-  flex:50%;
+  flex:60%;
 }
 .introfoto img {
   width: 80%;
+}
+
+
+/*Underside om Amo*/
+
+#om_os {
+  margin-top: -30%;
+}
+/*Tekst tilpasses*/
+#om_os h1, #bbb h1 {
+  padding: 10% 0 0 0;
+  font-size: 5em;
+}
+/* introflexbox */
+.om_amo{
+  width:80%;
+  flex-wrap: nowrap;
+  margin: 5%;
+}
+
+.omtekst {
+  flex:60%;
+  margin: 20px;
+  padding-left: 10%;
+  font-size: 1.2em;
+}
+.omtekst2 p {
+  font-size: 1.3em;
+  padding: 0 15% 0 15%;
+}
+
+.omfoto {
+  flex:40%;
+}
+.omfoto img {
+  width: 100%;
   opacity: 100%;
+}
+
+#bbb p {
+  padding: 5% 15% 10% 15%;
 }
   }

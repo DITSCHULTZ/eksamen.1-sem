@@ -29,7 +29,7 @@
             </div>
 
     <div class="nav__top_com">
-            <a href="index.html"><img src="billeder/logo_head.png" alt="Amo Logo" style="margin:0 auto; text-align:center; width:25%;padding: 0 10% 0 40%;"></a>
+            <a href="index.html"><img src="billeder/logo_head.png" alt="Amo Logo" style="margin:0 auto; text-align:center; width:25%;padding: 0 10% 0 38%;"></a>
             </div>
   <!-- Burgermenu -->
       <div class="burgermenu">
@@ -60,7 +60,7 @@
       </div>
     </div>
     <div class="dropdown">
-      <a href="#" class="dropbtn">Om os</a>
+      <a href="sider/om_os.html" class="dropbtn">Om os</a>
       <div class="dropdown-content">
         <a href="#">Hvem er Amo?</a>
         <a href="#">Kontakt</a>
@@ -106,7 +106,25 @@
 
   </section>
   <section class="nyhedsbrev">
-    <h2>Meld dig til vores nyhedsbrev</h2>
+    <!-- Nyhedsbrev Sign up-->
+    <form action="action_page.php">
+      <div class="container">
+        <h2>Tilmeld dig vores nyhedsbrev</h2>
+      </div>
+
+      <div class="container" style="background-color: transparent">
+        <input type="text" placeholder="Navn" name="name" required>
+        <input type="text" placeholder="Email adresse" name="mail" required>
+        <label>
+          <input type="checkbox" checked="checked" name="subscribe"> Jeg vil gerne modtage nyheder
+        </label>
+      </div>
+
+      <div class="container">
+        <input type="submit" value="Tilmeld">
+      </div>
+    </form>
+
   </section>
   </div>
 </div>
