@@ -267,11 +267,12 @@ input[type=submit]:hover {
 /*Baggrundstekstur*/
 .baggrundbanan img {
 width: 100%;
-height: 800px;
+height: 400px;
 padding-top:30%;
 position: relative;
 z-index: 5;
-opacity: 60%;
+opacity: 30%;
+
 }
 
 .bananoverskrift h1 {
@@ -283,6 +284,7 @@ opacity: 60%;
   text-align: center;
   font-family: monospace;
   font-weight: 500;
+  padding: 0 15% 0 15%;
 }
 
 /* introflexbox */
@@ -321,12 +323,16 @@ text-align: center;
 #ingrediensbox h2 {
   font-family: monospace;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 #ingrediensbox ol{
   font-family: var(--tekst);
   line-height: 2;
   padding: 15px;
+}
+#ingrediensbox li{
+  margin-bottom: 25px;
 }
 
 /*Ingrediensflex*/
@@ -343,6 +349,23 @@ text-align: center;
 
 .ingrediensenhed {
   flex:80%;
+}
+
+/* Underside - Ravioli*/
+#ingrediensbox h3 {
+  font-family: monospace;
+}
+
+.tip {
+  padding-left: 10%;
+  padding-bottom: 10%;
+}
+
+.fotobund img {
+  width: 50%;
+}
+.fotobund {
+  text-align: center;
 }
 
 /*Underside - Om os*/
@@ -408,9 +431,8 @@ text-align: center;
 
 #infographic img {
   width:70%;
-  padding: 5% 10% 0 10%;
+  padding: 5% 10% 0 15%;
 }
-
 
 
 
