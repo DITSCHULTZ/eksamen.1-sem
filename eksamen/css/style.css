@@ -66,17 +66,21 @@ body {
   }
 /*Header landingpage - computer*/
 .nav__top_com {
-    background-image: url(../billeder/header.png);
+  background-image: url(../billeder/header.png);
     background-repeat: no-repeat;
     position: absolute;
     width: 100%;
     height: 110vh;
   }
 
+    .nav__top2 img {
+      width:90%;
+    }
+
 /* Dropdown Button - https://www.w3schools.com/howto/howto_css_dropdown.asp */
 .dropbtn {
   color: black;
-  padding-bottom: 16px;
+  padding:0 10px 16px 10px;
   font-family: monospace;
   font-size: 220%;
   text-decoration: none;
@@ -95,7 +99,7 @@ body {
   background-color: var(--beige);
   min-width: 160px;
   z-index: 1;
-  margin-top: 16px;
+  margin-top: 10px;
 }
 
 /* Links inside the dropdown */
@@ -279,7 +283,7 @@ opacity: 30%;
   color: black;
   font-size: 2.5em;
   position: relative;
-  margin-top: -830px;
+  margin-top: -430px;
   z-index: 100;
   text-align: center;
   font-family: monospace;
@@ -435,7 +439,6 @@ text-align: center;
 }
 
 
-
 /* Extra small devices (phones, 768px and down) */
 @media only screen and (max-width: 768px) {
   #navigation {
@@ -456,6 +459,12 @@ text-align: center;
       display: none;
     }
 
+/*Logo header*/
+.nav__top2 {
+  position: absolute;
+  padding-top: 5%;
+  padding-left:10%;
+}
 /*Landingpage - header*/
 .nav__top {
   display:block;
@@ -567,7 +576,7 @@ input[type=submit] {
   /*Om os media rules*/
 
 #om_os {
-  margin-top: -120%;
+  margin-top: -50%;
 }
   /*Flexwrap til intro*/
   .om_amo {
@@ -610,6 +619,14 @@ input[type=submit] {
       width: 100%;
       height: 120vh;
     }
+
+
+    /*Logo header*/
+    .nav__top2 {
+      position: absolute;
+      margin-top: -15%;
+      padding-left:38%;
+    }
     /*Kampagnefoto*/
 .kampagne {
   display: none;
@@ -617,7 +634,7 @@ input[type=submit] {
 
     .kampagne_web {
       display:block;
-      margin-top: 25%;
+      margin-top: 35%;
     }
 
   .kampagne_web img {
@@ -689,7 +706,7 @@ input[type=submit] {
 
   /*Underside om Amo*/
   #om_os {
-    margin-top: -40%;
+    margin-top: -50%;
   }
   /*Flexbox*/
     .om_amo {
@@ -715,7 +732,12 @@ input[type=submit] {
     .burgermenu{
       display:none;
     }
-
+/*Logo header*/
+.nav__top2 {
+  position: absolute;
+  padding-top: 5%;
+  padding-left:38%;
+}
     /*Landingpage - header*/
     .nav__top {
       display:none;
@@ -729,7 +751,7 @@ input[type=submit] {
 
     .kampagne_web {
       display:block;
-      margin-top: 10%;
+      margin-top: 11%;
     }
 
     /*Emballagetekst*/
@@ -810,7 +832,7 @@ padding-bottom: 35%;
 /*Underside om Amo*/
 
 #om_os {
-  margin-top: -30%;
+  margin-top: -40%;
 }
 /*Tekst tilpasses*/
 #om_os h1, #bbb h1 {
